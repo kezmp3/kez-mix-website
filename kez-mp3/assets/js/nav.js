@@ -63,6 +63,18 @@
       });
   }
 
+  // Matches "/services.html" as well as "/services" — some hosts (Netlify's
+  // "Pretty URLs" post-processing, for one) rewrite .html links to
+  // extensionless paths at deploy time, so we can't assume the extension
+  // survives. Anything with a dot in its last path segment (images, audio,
+  // css, etc.) is assumed to be an asset, not a page, and is left alone.
+  function isPageLikePath(pathname) {
+    if (/\.html$/.test(pathname)) return true;
+    if (pathname === "/") return true;
+    var lastSegment = pathname.split("/").pop();
+    return lastSegment.indexOf(".") === -1;
+  }
+
   document.addEventListener("click", function (e) {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     var link = e.target.closest("a[href]");
@@ -74,7 +86,7 @@
     try { url = new URL(link.href, location.href); } catch (err) { return; }
 
     if (url.origin !== location.origin) return;
-    if (!/\.html$/.test(url.pathname) && url.pathname !== "/") return;
+    if (!isPageLikePath(url.pathname)) return;
 
     if (url.pathname === location.pathname && !url.hash) {
       e.preventDefault();
