@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Mix — kez.mp3</title>
+<meta name="description" content="Submit your custom dance mix request — songs, timeline, vision, and style.">
+<link rel="stylesheet" href="assets/css/style.css?v=32">
+</head>
+<body>
+
+<div id="page-content">
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">kez</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Mix Portfolio</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="book.html" class="nav-cta active">Book a Mix</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:56px;">
+  <div class="wrap">
+    <div class="eyebrow">Mix Submission Form</div>
+    <h1 style="font-size:clamp(30px,5vw,48px);">Let's build your mix.</h1>
+    <p class="hero-sub">Fill out the form below and I'll get back to you within 24–48 hours with a quote and next steps.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="form-shell">
+
+      <form id="mix-form" action="https://formspree.io/f/moevaoan" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New mix request — kez.mp3">
+
+        <div class="field">
+          <label for="f-name">Name <span class="req">*</span></label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input type="email" id="f-email" name="email" required>
+        </div>
+
+        <div class="field">
+          <label for="f-studio">Name of studio / company / team</label>
+          <input type="text" id="f-studio" name="studio">
+        </div>
+
+        <div class="field">
+          <label>Mix Desired <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="mix_type" value="Custom Mix" required>
+              <div>
+                <div class="rtitle">Custom Mix</div>
+                <div class="rdesc">Transitions, beats, and effects — song(s) uniquely remixed for your company/team.</div>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="mix_type" value="Remix">
+              <div>
+                <div class="rtitle">Remix</div>
+                <div class="rdesc">Single track edit, remixed with added layers, elements, and effects. Around 1-2 minutes in length.</div>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="mix_type" value="Blend Mix">
+              <div>
+                <div class="rtitle">Blend Mix</div>
+                <div class="rdesc">Basic transitions that blend one song into the next.</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-vision">Describe your vision for the mix</label>
+          <textarea id="f-vision" name="vision" placeholder="Energy level, mood, key moments in the choreography, formations, etc."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-deadline">When do you need the mix by? <span class="req">*</span></label>
+          <input type="date" id="f-deadline" name="deadline" required>
+          <div class="hint">Standard delivery is 7–14 days. A rush fee applies for quicker delivery.</div>
+        </div>
+
+        <div class="field">
+          <label for="f-songs">List of songs (with timestamps if applicable)</label>
+          <textarea id="f-songs" name="songs" placeholder="e.g. 1. Song Title — Artist (0:00–0:20)&#10;2. Song Title — Artist (0:20–0:45)"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-length">Length of mix needed</label>
+          <input type="text" id="f-length" name="length" placeholder="e.g. 2:30">
+        </div>
+
+        <div class="field">
+          <label for="f-style">Style of mix</label>
+          <input type="text" id="f-style" name="style" placeholder="e.g. Hip Hop, Competition, Gymnastics, etc.">
+        </div>
+
+        <button type="submit" class="form-submit">Submit Request</button>
+        <div id="form-status"></div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/marques_wooruiz/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="mailto:marqueswooruiz@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      <a href="https://soundcloud.com/kezzzzzzzz" target="_blank" rel="noopener" aria-label="SoundCloud"><svg viewBox="0 0 24 24" width="21" height="19" fill="currentColor"><path d="M1.5 14.5h1.2v4H1.5zM3.4 12.8h1.2v5.7H3.4zM5.3 11.8h1.2v6.7H5.3zM7.2 11h1.2v7.5H7.2zM9.1 10.4h1.2v8.1H9.1z"/><path d="M11.3 9c.4-2.7 2.7-4.4 5.2-4.1 2 .2 3.7 1.7 4.1 3.7A3.8 3.8 0 0 1 20.2 16H11.3V9z"/></svg></a>
+      <a href="https://www.youtube.com/@kez.mp3" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="21" height="19" fill="none"><rect x="1" y="5" width="22" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10 8.7l6 3.3-6 3.3z" fill="currentColor"/></svg></a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="book.html">Book a Mix</a></li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+
+<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/player.js?v=4"></script>
+<script src="assets/js/nav.js?v=3"></script>
+</body>
+</html>
